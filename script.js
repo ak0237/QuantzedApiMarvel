@@ -9,8 +9,9 @@ function fetchApiMarvel() {
     const ts = '1640660504620'
     const apiKey = '83b88d0adfd986c16eabc702bf00a366'
     const hash = 'e64b1dfab1dd4630fb069d80f1f85755'
+    var offset = Math.floor(Math.random() * 1300) + 20
 
-    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}`)
+    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&limit=20&offset=${offset}`)
     .then((response) => {
 
         return response.json()})
