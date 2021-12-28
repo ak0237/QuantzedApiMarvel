@@ -8,15 +8,20 @@ function fetchApiMarvel() {
 
     const ts = '1640660504620'
     const apiKey = '83b88d0adfd986c16eabc702bf00a366'
-    const privateKey = '3fe2972666a5ed64616d16d172d3986a69aa1cc6'
     const hash = 'e64b1dfab1dd4630fb069d80f1f85755'
 
-    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}`)
+    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&limit=50`)
     .then((response) => {
 
         return response.json()})
     .then((objeto) => {
         console.log(objeto)
+        const keys = Object.keys(objeto.data.results)
+        const randIndex = Math.floor(Math.random() * keys.length)
+        const randKey = keys[randIndex]
+        const randomValue = objeto.data.results[randKey]
+        console.log(randomValue)
+
         const herois = document.querySelector('#herois_ativos')
         
         objeto.data.results.forEach((item) => {
