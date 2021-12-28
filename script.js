@@ -40,6 +40,8 @@ function fetchApiMarvel() {
         console.log(ativos)
         console.log(heroisUnicos)
 
+       
+
 
         //Encontra onde os heróis aparecerão na página HTML
         const herois = document.querySelector('#herois_ativos')
@@ -49,9 +51,11 @@ function fetchApiMarvel() {
         
             const nomeHeroi = item.name
             const srcImagem = item.thumbnail.path + '.' + item.thumbnail.extension
-
-            criarDiv(srcImagem, nomeHeroi, herois)
-            
+            if (srcImagem.includes('image_not_available.jpg')){
+                return false
+            }else{
+                criarDiv(srcImagem, nomeHeroi, herois)
+            }
         })
     })
 }
