@@ -17,24 +17,32 @@ function fetchApiMarvel() {
         return response.json()})
     .then((objeto) => {
         console.log(objeto)
-        const lista = document.querySelector('#herois_ativos')
+        const herois = document.querySelector('#herois_ativos')
         
         objeto.data.results.forEach((item) => {
-            const li = document.createElement('li')
-
-            li.setAttribute('id', item.id)
+        
             const nomeHeroi = item.name
             const srcImagem = item.thumbnail.path + '.' + item.thumbnail.extension
-            criarDiv(srcImagem, nomeHeroi)
-            lista.appendChild(li)
+
+            criarDiv(srcImagem, nomeHeroi, herois)
+            
         })
     })
 }
 
-function criarDiv(srcImagem, nomeHeroi){
+function criarDiv(srcImagem, nomeHeroi, divHeroi){
+    const divPai = document.createElement('div')
+    const divFilho = document.createElement('div')
     const nome = document.createElement('text')
     const img = document.createElement('img')
 
     nome.textContent = nomeHeroi
     img.src = srcImagem
+
+    divFilho.appendChild(img)
+    divFilho.appendChild(nome)
+    divPai.appendChild(divFilho)
+    divHeroi.appendChild(divPai)
+
+    divPai.classList.add("personagem")
 }
