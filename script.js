@@ -18,22 +18,34 @@ function fetchApiMarvel() {
         console.log(objeto)
 
         //Código para definir quantos heróis estarão ativos 
-        var seed = Math.floor(Math.random() * 9) + 1 
+        var seed = Math.floor(Math.random() * 18) + 2 
+        console.log(seed)
         var ativos = []
 
         //Loop para aleatorizar os heróis ativos
         for(let indice = 0; indice < seed; indice++){
-             ativos [indice] = randomizer(objeto)
-        }
-        
+            ativos [indice] = randomizer(objeto)
+    
+           //ordena os nomes alfabeticamente            
+            ativos.sort((a, b) =>{
+                if(a.name < b.name){
+                    return false
+                }else{
+                    return true
+                }
+            })}
+
+        let heroisUnicos = [...new Map(ativos.map((item) => [item["name"], item])).values()]
+
         console.log(ativos)
+        console.log(heroisUnicos)
 
 
         //Encontra onde os heróis aparecerão na página HTML
         const herois = document.querySelector('#herois_ativos')
         
         //Renderiza os heróis no HTML
-        ativos.forEach((item) => {
+        heroisUnicos.forEach((item) => {
         
             const nomeHeroi = item.name
             const srcImagem = item.thumbnail.path + '.' + item.thumbnail.extension
@@ -44,12 +56,13 @@ function fetchApiMarvel() {
     })
 }
 
+
+
 function randomizer(objeto){
     const keys = Object.keys(objeto.data.results)
     const randIndex = Math.floor(Math.random() * keys.length)
     const randKey = keys[randIndex]
     const randomValue = objeto.data.results[randKey]
-    //console.log(randomValue)
     return randomValue
 }
 
