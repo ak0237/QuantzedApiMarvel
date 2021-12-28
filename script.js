@@ -33,7 +33,7 @@ function fetchApiMarvel() {
         const herois = document.querySelector('#herois_ativos')
         
         //Renderiza os heróis no HTML
-        objeto.data.results.forEach((item) => {
+        ativos.forEach((item) => {
         
             const nomeHeroi = item.name
             const srcImagem = item.thumbnail.path + '.' + item.thumbnail.extension
