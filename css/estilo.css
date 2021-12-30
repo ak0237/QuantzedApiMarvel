@@ -8,92 +8,133 @@
 
 body{
     font-size: 100%;
-    background: #0e0f0f;
+    background: black;
     color: silver;
 }
 
+
+
+/*Terminal*/
 .area-terminal{
-    
     width:100%;
     height: 75%;
     justify-items: center;
 }
+    /*Cabeçalho*/
+    .tela-terminal{
+        height: 720px;
+        width: 100%;
+        background-color: rgb(15, 14, 14);
+        border-radius: 25px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
+        color: #00FF41;
+        font-family: 'Matrix Code NFI', sans-serif;
+        padding-top: 20px;
+        border: 1px inset chartreuse;
+    }
+    /*Conteudo Tela*/
+    #conteudo-tela{
+        align-items: center;
+        height: 600px;
+    }
+    /*Imagem*/
+    #testeimagem{
+        object-fit: cover;
+        height: 500px;
+        width: 500px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 30px;
+    }
+    /*Informações*/
+    #conteudo-tela section {
+        width: 790px;
+    }
+    #conteudo-tela section p {
+        font-size: 18px;
+    }
 
-.tela-terminal{
-    height: 720px;
-    width: 100%;
-    background-color: black;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
-	color: #00FF41;
-	font-family: 'Matrix Code NFI', sans-serif;
-    padding-top: 20px;
-    
-}
 
-
-
+/*Navbar*/
 nav{
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    background-color: green;
-}
-
-.personagem img{
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    margin: 10px;
-    box-shadow: 1px 3px rgb(0, 0, 0);
-}
-
-nav div ul li a{
-    color: rgb(235, 0, 176);
-}
-
-.personagem div {
-    text-align: center;
-}
-
-#herois_ativos{
-    overflow:auto;
-}
-
-.personagem text{
-    display: block;
-    width: 300px;
-}
-.personagem:hover{
-    border: 0.5px solid green;
-    cursor: pointer;
-    background-color: rgb(34, 33, 33);
-    color: green;
+    border-radius: 25px;
+    border: 1px inset chartreuse; 
+    margin: 3px;
 }
 
 
-.personagem p{
-    display: none;
+/*Main*/
+main {
+    background-color: black;
+    margin-top: 10px;
 }
+    /*Herois Ativos*/
+    #herois_ativos{
+        overflow:auto;
+    }
+    /*Personagens*/
+    .personagem{
+        border-radius: 20px;
+    }
+        /*Personagem*/
+        .personagem div {
+            text-align: center;
+        }
+        .personagem:hover{
+            border: 0.5px solid green;
+            cursor: pointer;
+            background-color: rgb(15, 14, 14);
+            color: green;
+        }
+            /*Imagem*/
+            .personagem img{
+                border-radius: 50%;
+                height: 120px;
+                width: 120px;
+                margin: 1px;
+                box-shadow: 1px 3px rgb(0, 0, 0);
+            }
+            /*Texto*/
+            .personagem text{
+                display: block;
+                width: 200px;
+            }
+            .personagem p{
+                    display: none;
+            }
+            
+        
 
-.personagem{
-    border-radius: 20px;
-}
 
-#testeimagem{
-    object-fit: cover;
-    height: 500px;
-    width: 500px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 30px;
 
-}
 
-#testeimagem:hover{
-   
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #imagem-do-heroi{
     border: 5px solid green;
@@ -103,19 +144,6 @@ nav div ul li a{
     
 }
 
-#conteudo-tela{
-    align-items: center;
-    height: 600px;
-}
 
-main {
-    background-color: black;
-    padding: 10px;
-}
-#conteudo-tela section {
-    width: 790px;
-}
 
-#conteudo-tela section p {
-    font-size: 19px;
-}
+

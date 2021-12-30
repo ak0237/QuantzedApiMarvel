@@ -11,7 +11,7 @@ function fetchApiMarvel() {
     const hash = 'e64b1dfab1dd4630fb069d80f1f85755'
     var offset = Math.floor(Math.random() * 1300) + 20
 
-    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&limit=20&offset=${offset}`)
+    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&limit=15&offset=${offset}`)
     .then((response) => {
 
         return response.json()})
@@ -107,12 +107,12 @@ function teste(escolhido){
     const tela = document.querySelector("#conteudo-tela")
     
     tela.firstElementChild.setAttribute('src', selecionado.firstChild.src)
-    document.getElementById('nome-do-heoi').innerHTML = `Nome: ${escolhido} <hr>`
+    document.getElementById('nome-do-heoi').innerHTML = `Name: ${escolhido} <hr>`
 
     if(selecionado.lastChild.textContent == ""){
-        tela.lastElementChild.lastElementChild.innerHTML = "<strong>Acesso Negado</strong><br>Informaçõs complementares do elemento requisitado estão negadas à agentes de patente baixa.<br>"
+        tela.lastElementChild.lastElementChild.innerHTML = "<strong>Acess Denied</strong><br>Additional Informatins about this element are denied to recruits.<br>"
     }else{
-        tela.lastElementChild.lastElementChild.innerHTML = `Descrição: ${selecionado.lastChild.textContent}`
+        tela.lastElementChild.lastElementChild.innerHTML = `Description: ${selecionado.lastChild.textContent}`
     }
 
 }
