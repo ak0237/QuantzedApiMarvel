@@ -15,6 +15,7 @@ function fetchApiMarvel() {
     .then((response) => {
 
         return response.json()})
+
     .then((objeto) => {
         console.log(objeto)
 
@@ -51,11 +52,12 @@ function fetchApiMarvel() {
         heroisUnicos.forEach((item) => {
         
             const nomeHeroi = item.name
+            const descricao = item.description
             const srcImagem = item.thumbnail.path + '.' + item.thumbnail.extension
-            if (srcImagem.includes('image_not_available.jpg')){
+            if (srcImagem.includes('image_not_available.jpg') || srcImagem.includes('.gif')){
                 return false
             }else{
-                criarDiv(srcImagem, nomeHeroi, herois)
+                criarDiv(srcImagem, nomeHeroi, herois, descricao)
             }
         })
     })
@@ -71,25 +73,35 @@ function randomizer(objeto){
     return randomValue
 }
 
-function criarDiv(srcImagem, nomeHeroi, divHeroi){
+function criarDiv(srcImagem, nomeHeroi, divHeroi, descricao){
     const divPai = document.createElement('div')
     const divFilho = document.createElement('div')
+    const divDesc = document.createElement('div')
     const nome = document.createElement('text')
     const img = document.createElement('img')
+    const desc = document.createElement('p')
 
     nome.textContent = nomeHeroi
+    desc.textContent = descricao
     img.src = srcImagem
 
     divFilho.appendChild(img)
     divFilho.appendChild(nome)
+    divFilho.appendChild(desc)
     divPai.appendChild(divFilho)
     divHeroi.appendChild(divPai)
 
     divPai.classList.add("personagem")
+    divFilho.setAttribute("onclick", "teste(this.id)")
+    divFilho.setAttribute("id", nomeHeroi)
 }
 
 function limpar(){
         const div = document.getElementById("herois_ativos")
         div.innerText = ""
     
+}
+
+function teste(bactero){
+    alert(bactero)
 }

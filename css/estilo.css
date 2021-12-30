@@ -5,9 +5,16 @@
     text-decoration: none;
 }
 
+@font-face {
+    font-family: 'Matrix Code NFI';
+    src: url('../fonts/matrix code nfi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body{
     font-size: 100%;
-    background: #212426;
+    background: #0e0f0f;
     color: silver;
 }
 
@@ -24,11 +31,20 @@ body{
     background-color: black;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
+	color: #00FF41;
+	font-family: 'Matrix Code NFI', sans-serif;
+    padding-top: 20px;
+    
 }
+
+
 
 nav{
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+    background-color: green;
 }
 
 .personagem img{
@@ -53,7 +69,18 @@ nav div ul li a{
 
 .personagem text{
     display: block;
+    width: 300px;
 }
 .personagem:hover{
-    background-color: blueviolet;
+    background-color: rgb(43, 226, 83);
+    cursor: pointer;
+}
+
+
+.personagem p{
+    display: none;
+}
+
+.personagem{
+    border-radius: 20px;
 }
