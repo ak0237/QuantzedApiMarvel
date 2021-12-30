@@ -87,3 +87,9 @@ function criarDiv(srcImagem, nomeHeroi, divHeroi){
 
     divPai.classList.add("personagem")
 }
+
+function limpar(){
+        const div = document.getElementById("herois_ativos")
+        div.innerText = ""
+    
+}
