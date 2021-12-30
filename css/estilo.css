@@ -8,6 +8,7 @@
 body{
     font-size: 100%;
     background: #212426;
+    color: silver;
 }
 
 .area-terminal{
@@ -21,4 +22,38 @@ body{
     height: 720px;
     width: 100%;
     background-color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+nav{
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.personagem img{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    box-shadow: 1px 3px rgb(0, 0, 0);
+}
+
+nav div ul li a{
+    color: rgb(235, 0, 176);
+}
+
+.personagem div {
+    text-align: center;
+}
+
+#herois_ativos{
+    overflow:auto;
+}
+
+.personagem text{
+    display: block;
+}
+.personagem:hover{
+    background-color: blueviolet;
 }
