@@ -102,6 +102,15 @@ function limpar(){
     
 }
 
-function teste(bactero){
-    alert(bactero)
+function teste(escolhido){
+    alert(escolhido)
+    const selecionado = document.getElementById(escolhido)
+    alert(selecionado)
+    const tela = document.querySelector("#conteudo-tela")
+    
+    tela.firstElementChild.setAttribute('src', selecionado.firstChild.src)
+    document.getElementById('nome-do-heoi').innerHTML = escolhido
+    tela.lastElementChild.lastElementChild.innerHTML = selecionado.lastChild.textContent
+
+
 }
