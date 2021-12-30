@@ -103,14 +103,16 @@ function limpar(){
 }
 
 function teste(escolhido){
-    alert(escolhido)
     const selecionado = document.getElementById(escolhido)
-    alert(selecionado)
     const tela = document.querySelector("#conteudo-tela")
     
     tela.firstElementChild.setAttribute('src', selecionado.firstChild.src)
-    document.getElementById('nome-do-heoi').innerHTML = escolhido
-    tela.lastElementChild.lastElementChild.innerHTML = selecionado.lastChild.textContent
+    document.getElementById('nome-do-heoi').innerHTML = `Nome: ${escolhido} <hr>`
 
+    if(selecionado.lastChild.textContent == ""){
+        tela.lastElementChild.lastElementChild.innerHTML = "<strong>Acesso Negado</strong><br>Informaçõs complementares do elemento requisitado estão negadas à agentes de patente baixa.<br>"
+    }else{
+        tela.lastElementChild.lastElementChild.innerHTML = `Descrição: ${selecionado.lastChild.textContent}`
+    }
 
 }

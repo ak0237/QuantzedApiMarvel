@@ -66,8 +66,10 @@ nav div ul li a{
     width: 300px;
 }
 .personagem:hover{
-    background-color: rgb(43, 226, 83);
+    border: 0.5px solid green;
     cursor: pointer;
+    background-color: rgb(34, 33, 33);
+    color: green;
 }
 
 
@@ -81,16 +83,16 @@ nav div ul li a{
 
 #testeimagem{
     object-fit: cover;
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px;
     padding: 10px;
     margin: 10px;
+    border-radius: 30px;
 
 }
 
 #testeimagem:hover{
-    width: 600px;
-    height: 600px;
+   
 }
 
 #imagem-do-heroi{
@@ -98,6 +100,7 @@ nav div ul li a{
     height: 90%;
     width: 20%;
     justify-items: center;
+    
 }
 
 #conteudo-tela{
@@ -105,3 +108,14 @@ nav div ul li a{
     height: 600px;
 }
 
+main {
+    background-color: black;
+    padding: 10px;
+}
+#conteudo-tela section {
+    width: 790px;
+}
+
+#conteudo-tela section p {
+    font-size: 19px;
+}
