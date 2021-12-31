@@ -1,8 +1,7 @@
-/*const scriptTag = document.createElement('script')
-scriptTag.src = 'https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js'
-document.head.appendChild(scriptTag)*/
-
-
+function mudarBotao(){
+    btn = document.getElementById("botao_normal")
+    btn.setAttribute("onclick", "history.back()")
+}
 //Função Para Acessar a API
 function fetchApiMarvel() {
     
