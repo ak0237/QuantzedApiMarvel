@@ -27,13 +27,22 @@ html, body{
         width: 100%;
         background-color: rgb(15, 14, 14);
         border-radius: 25px;
-        color: rgb(255, 255, 255);
         text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
         color: #00FF41;
-        font-family: 'Matrix Code NFI', sans-serif;
         padding-top: 20px;
         border: 1px inset chartreuse;
     }
+        .tela-terminal button{
+            background-color: rgb(15, 14, 14);
+            border: none;
+            text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
+            color: #00FF41;
+            font-size: 22px;
+            
+           
+        }
+
+
     /*Conteudo Tela*/
     #conteudo-tela{
         align-items: center;
@@ -128,6 +137,29 @@ footer p{
     display: inline;
 }
 
+@media print {
+    body * {
+      visibility: hidden;
+     
+    }
+    #conteudo-tela, #conteudo-tela * {
+      visibility: visible;
+      
+      
+    }
+    #conteudo-tela{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-print-color-adjust: exact;
+        background-color: black !important;
+        
+        
+    }
+   
+  }
 
 
 
