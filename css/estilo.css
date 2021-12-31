@@ -6,11 +6,11 @@
 }
 
 
-body{
+html, body{
     font-size: 100%;
     background-color: black;
     color: silver;
-
+    height: 100%;
 }
 
 
@@ -121,7 +121,12 @@ main {
             
         
 
-
+footer{
+    text-align: center;
+}
+footer p{
+    display: inline;
+}
 
 
 
