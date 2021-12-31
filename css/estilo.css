@@ -86,6 +86,7 @@ main {
             cursor: pointer;
             background-color: rgb(15, 14, 14);
             color: green;
+            filter: grayscale(0);
         }
             /*Imagem*/
             .personagem img{
@@ -94,6 +95,16 @@ main {
                 width: 120px;
                 margin: 1px;
                 box-shadow: 1px 3px rgb(0, 0, 0);
+                filter: grayscale(1);
+            }
+            .personagem:hover img{
+                filter:grayscale(0);
+                transition-delay: 100ms;
+            }
+            .personagem img:hover{
+                cursor: pointer;
+                filter: grayscale(0);
+                transition-delay: 100ms;
             }
             /*Texto*/
             .personagem text{
