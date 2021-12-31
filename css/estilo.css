@@ -39,7 +39,7 @@ body{
         height: 600px;
     }
     /*Imagem*/
-    #testeimagem{
+    #imagem-do-painel{
         object-fit: cover;
         height: 500px;
         width: 500px;

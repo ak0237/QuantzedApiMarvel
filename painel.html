@@ -7,33 +7,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
+
+
 <body>
-
   <header>
-    <div class="area-terminal container">
+    <div class="area-terminal container"> <!--Todo o Teminal-->
 
-        <div class="tela-terminal">
-          <section class="d-flex justify-content-center">
+        <div class="tela-terminal"> <!--Tela do Terminal-->
+
+
+          <section class="d-flex justify-content-center"><!--Cabeçalho do Terminal-->
             <h1>Monitoring Panel</h1>
           </section>
       
           <hr>
 
-          <article class="d-flex justify-content-around" id="conteudo-tela">
+          <article class="d-flex justify-content-around" id="conteudo-tela"> <!--Informações dos Personagens-->
+
+            <img src="" alt="" srcset="" id="imagem-do-painel"> <!--Imagem do Personagem-->
             
-            <img src="" alt="" srcset="" id="testeimagem">
-            
-            <section>
-              <h2 id="nome-do-heoi"></h2>
-              <p></p>
+            <section> <!--Texto Sobre o Personagem-->
+              <h2 id="nome-do-heoi"></h2> <!--Nome do Personagem-->
+              <p></p> <!--Descrição do Personagem-->
             </section>
-            
 
           </article>
-          
+
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--Navbar do Terminal-->
 
           <div class="container-fluid">
 
@@ -59,13 +62,18 @@
   </header>
 
     
-    <main>
+    <main> <!--Teclado do Terminal-->
 
-        <div id="herois_ativos" class="d-flex justify-content-center"></div>
-
+        <div id="herois_ativos" class="d-flex justify-content-center"></div><!--Div Onde os Personagens Serão Renderizados-->
+        
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+
+    <div><!--Bootstrap e Link do JS-->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="./script.js"></script>
+
+    </div>
 </body>
 </html>
