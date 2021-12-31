@@ -37,6 +37,7 @@ html, body{
             text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
             color: #00FF41;
             font-size: 22px;
+            visibility: hidden;
         }
 
     /*Conteudo Tela*/

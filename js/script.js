@@ -1,6 +1,6 @@
-function mudarBotao(){
-    btn = document.getElementById("botao_normal")
-    btn.setAttribute("onclick", "history.back()")
+function apareceBotao(){
+    btn = document.getElementById("botao_imprimir")
+    btn.setAttribute("style", "visibility: visible")
 }
 //Função Para Acessar a API
 function fetchApiMarvel() {
@@ -110,7 +110,7 @@ function criarDiv(srcImagem, nomeHeroi, divHeroi, descricao){
 
     //Código Para Adicionar Atriburos na Div
     divPai.classList.add("personagem")
-    divFilho.setAttribute("onclick", "selecao(this.id)")
+    divFilho.setAttribute("onclick", "selecao(this.id); apareceBotao()")
     divFilho.setAttribute("id", nomeHeroi)
 }
 
