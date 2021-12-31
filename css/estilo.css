@@ -1,3 +1,4 @@
+/*Geral*/
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +6,12 @@
     text-decoration: none;
 }
 
-
 html, body{
     font-size: 100%;
     background-color: black;
     color: silver;
     height: 100%;
 }
-
 
 
 /*Terminal*/
@@ -38,16 +37,14 @@ html, body{
             text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
             color: #00FF41;
             font-size: 22px;
-            
-           
         }
-
 
     /*Conteudo Tela*/
     #conteudo-tela{
         align-items: center;
         height: 600px;
     }
+
     /*Imagem*/
     #imagem-do-painel{
         object-fit: cover;
@@ -57,6 +54,7 @@ html, body{
         margin: 10px;
         border-radius: 30px;
     }
+
     /*Informações*/
     #conteudo-tela section {
         width: 790px;
@@ -104,8 +102,8 @@ main {
             /*Imagem*/
             .personagem img{
                 border-radius: 50%;
-                height: 120px;
-                width: 120px;
+                height: 100px;
+                width: 100px;
                 margin: 1px;
                 box-shadow: 1px 3px rgb(0, 0, 0);
                 filter: grayscale(1);
@@ -125,77 +123,57 @@ main {
                 width: 200px;
             }
             .personagem p{
-                    display: none;
+                display: none;
             }
-            
-        
 
+
+/*Rodapé*/
 footer{
     text-align: center;
 }
-footer p{
-    display: inline;
-}
+    /*Texto*/
+        footer p{
+            display: inline;
+            text-shadow: 0 0 3px #00FF41,0 0 5px #00FF41,0 0 5px #00FF41;
+            color: #00FF41;
+        }
 
+
+/*Imprimir*/
 @media print {
     body * {
       visibility: hidden;
-     
     }
-    #conteudo-tela, #conteudo-tela * {
-      visibility: visible;
-      
-      
-    }
-    #conteudo-tela{
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        left: 0;
-        top: 0;
-        -webkit-print-color-adjust: exact;
-        background-color: black !important;
-        
-        
-    }
-   
-  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#imagem-do-heroi{
-    border: 5px solid green;
-    height: 90%;
-    width: 20%;
-    justify-items: center;
     
+    /*Tela*/
+        #conteudo-tela, #conteudo-tela * {
+        visibility: visible;
+        }
+        #conteudo-tela{
+            width: 100vw;
+            height: 90vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-print-color-adjust: exact;
+            background-color: black !important;
+        }
+
+
+    /*Rodapé*/
+        .footer, .footer P{
+            visibility: visible;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0;
+            height: 10vh;
+            width: 100vw;
+            text-align: center;
+        }
+        .footer p{
+            display: inline;
+            text-align: center;
+        }
 }
-
-
-
-
