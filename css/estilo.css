@@ -8,8 +8,9 @@
 
 body{
     font-size: 100%;
-    background: black;
+    background-color: black;
     color: silver;
+
 }
 
 
@@ -61,6 +62,9 @@ nav{
     border-radius: 25px;
     border: 1px inset chartreuse; 
     margin: 3px;
+}
+nav ul{
+    width: 100%;
 }
 
 
