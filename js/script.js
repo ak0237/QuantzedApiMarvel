@@ -1,3 +1,4 @@
+//Função Para Imprimir as Informações do Persobagem
 function apareceBotao(){
     btn = document.getElementById("botao_imprimir")
     btn.setAttribute("style", "visibility: visible")
